@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Lhotse Management Solutions: single-page site, version 14.
+<!-- Lhotse Management Solutions: single-page site, version 15.
      Everything (styles, images, copy) lives in this one file so it can be hosted anywhere as index.html. -->
 <html lang="en">
 <head>
@@ -127,34 +127,34 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
     </div>
   </div>
   <!-- Background art: the two logo-style peaks, with a before-and-after control chart laid over them -->
-  <svg viewBox="330 0 800 220" role="img" aria-label="Control chart over two mountain peaks: performance is out of control, then a change with a small managed dip, then performance in control at a higher level within tighter limits" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,800px);height:auto">
+  <svg viewBox="330 0 800 220" role="img" aria-label="Control chart over two mountain peaks: performance is out of control, then a change with a small managed dip and a steady climb, then performance in control at a higher level within tighter limits" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,800px);height:auto">
     <path d="M330,220 C500,206 580,74 636,44 C652,35 667,40 680,58 C722,116 744,184 810,220 Z" fill="#249cd8" opacity=".22"/>   <!-- blue peak -->
     <path d="M600,220 C690,192 742,42 792,20 C808,13 821,20 834,42 C894,134 990,204 1130,220 Z" fill="#111b24" opacity=".12"/>  <!-- dark peak -->
     <path d="M688,220 C704,182 722,142 738,129 C750,120 761,134 769,151 C781,181 793,206 812,220 Z" fill="#066bb1" opacity=".28"/> <!-- deep blue fold -->
     <!-- Before the change: center line and control limits; they stop at the change -->
-    <path d="M370,148H688" stroke="#111b24" stroke-width="1" opacity=".55" fill="none"/>
-    <path d="M370,121H688 M370,175H688" stroke="#111b24" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6" fill="none"/>
-    <!-- After the change: recalculated center line and tighter limits, starting once the change has settled -->
-    <path d="M790,92H1078" stroke="#066bb1" stroke-width="1" fill="none"/>
-    <path d="M790,77H1078 M790,107H1078" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
+    <path d="M370,148H657" stroke="#111b24" stroke-width="1" opacity=".55" fill="none"/>
+    <path d="M370,121H657 M370,175H657" stroke="#111b24" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6" fill="none"/>
+    <!-- After the change: recalculated center line and tighter limits, starting once the climb has settled -->
+    <path d="M877,92H1076" stroke="#066bb1" stroke-width="1" fill="none"/>
+    <path d="M877,77H1076 M877,107H1076" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
     <!-- The change point -->
-    <path d="M688,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
+    <path d="M657,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
     <!-- Results: before the change in dark, from the change onward in blue -->
-    <polyline points="382,142 406,114 430,156 454,133 478,160 502,144 526,166 550,138 574,181 598,143 622,131 646,162 670,142" stroke="#111b24" stroke-width="2" stroke-linejoin="round" opacity=".8" fill="none"/>
-    <polyline points="670,142 706,162 730,168 754,158 778,120 802,89 826,96 850,86 874,94 898,88 922,98 946,87 970,91 994,97 1018,88 1042,95 1066,90" stroke="#066bb1" stroke-width="2" stroke-linejoin="round" fill="none"/>
-    <circle cx="382" cy="142" r="3.2" fill="#111b24"/><circle cx="406" cy="114" r="3.2" fill="#111b24"/><circle cx="430" cy="156" r="3.2" fill="#111b24"/><circle cx="454" cy="133" r="3.2" fill="#111b24"/><circle cx="478" cy="160" r="3.2" fill="#111b24"/><circle cx="502" cy="144" r="3.2" fill="#111b24"/><circle cx="526" cy="166" r="3.2" fill="#111b24"/><circle cx="550" cy="138" r="3.2" fill="#111b24"/><circle cx="574" cy="181" r="3.2" fill="#111b24"/><circle cx="598" cy="143" r="3.2" fill="#111b24"/><circle cx="622" cy="131" r="3.2" fill="#111b24"/><circle cx="646" cy="162" r="3.2" fill="#111b24"/><circle cx="670" cy="142" r="3.2" fill="#111b24"/>
-    <circle cx="706" cy="162" r="3.2" fill="#066bb1"/><circle cx="730" cy="168" r="3.2" fill="#066bb1"/><circle cx="754" cy="158" r="3.2" fill="#066bb1"/><circle cx="778" cy="120" r="3.2" fill="#066bb1"/><circle cx="802" cy="89" r="3.2" fill="#066bb1"/><circle cx="826" cy="96" r="3.2" fill="#066bb1"/><circle cx="850" cy="86" r="3.2" fill="#066bb1"/><circle cx="874" cy="94" r="3.2" fill="#066bb1"/><circle cx="898" cy="88" r="3.2" fill="#066bb1"/><circle cx="922" cy="98" r="3.2" fill="#066bb1"/><circle cx="946" cy="87" r="3.2" fill="#066bb1"/><circle cx="970" cy="91" r="3.2" fill="#066bb1"/><circle cx="994" cy="97" r="3.2" fill="#066bb1"/><circle cx="1018" cy="88" r="3.2" fill="#066bb1"/><circle cx="1042" cy="95" r="3.2" fill="#066bb1"/><circle cx="1066" cy="90" r="3.2" fill="#066bb1"/>
+    <polyline points="382,142 404,114 426,156 448,133 470,160 492,144 514,166 536,138 558,181 580,143 602,131 624,162 646,142" stroke="#111b24" stroke-width="2" stroke-linejoin="round" opacity=".8" fill="none"/>
+    <polyline points="646,142 668,158 690,166 712,161 734,151 756,141 778,144 800,130 822,119 844,108 866,99 888,89 910,96 932,86 954,94 976,88 998,98 1020,87 1042,95 1064,90" stroke="#066bb1" stroke-width="2" stroke-linejoin="round" fill="none"/>
+    <circle cx="382" cy="142" r="3" fill="#111b24"/><circle cx="404" cy="114" r="3" fill="#111b24"/><circle cx="426" cy="156" r="3" fill="#111b24"/><circle cx="448" cy="133" r="3" fill="#111b24"/><circle cx="470" cy="160" r="3" fill="#111b24"/><circle cx="492" cy="144" r="3" fill="#111b24"/><circle cx="514" cy="166" r="3" fill="#111b24"/><circle cx="536" cy="138" r="3" fill="#111b24"/><circle cx="558" cy="181" r="3" fill="#111b24"/><circle cx="580" cy="143" r="3" fill="#111b24"/><circle cx="602" cy="131" r="3" fill="#111b24"/><circle cx="624" cy="162" r="3" fill="#111b24"/><circle cx="646" cy="142" r="3" fill="#111b24"/>
+    <circle cx="668" cy="158" r="3" fill="#066bb1"/><circle cx="690" cy="166" r="3" fill="#066bb1"/><circle cx="712" cy="161" r="3" fill="#066bb1"/><circle cx="734" cy="151" r="3" fill="#066bb1"/><circle cx="756" cy="141" r="3" fill="#066bb1"/><circle cx="778" cy="144" r="3" fill="#066bb1"/><circle cx="800" cy="130" r="3" fill="#066bb1"/><circle cx="822" cy="119" r="3" fill="#066bb1"/><circle cx="844" cy="108" r="3" fill="#066bb1"/><circle cx="866" cy="99" r="3" fill="#066bb1"/><circle cx="888" cy="89" r="3" fill="#066bb1"/><circle cx="910" cy="96" r="3" fill="#066bb1"/><circle cx="932" cy="86" r="3" fill="#066bb1"/><circle cx="954" cy="94" r="3" fill="#066bb1"/><circle cx="976" cy="88" r="3" fill="#066bb1"/><circle cx="998" cy="98" r="3" fill="#066bb1"/><circle cx="1020" cy="87" r="3" fill="#066bb1"/><circle cx="1042" cy="95" r="3" fill="#066bb1"/><circle cx="1064" cy="90" r="3" fill="#066bb1"/>
     <!-- Small chart labels; hidden on phones, where they would be too small to read -->
     <g class="chartlabel" font-size="9" font-weight="600" letter-spacing=".06em">
-      <text x="529" y="100" text-anchor="middle" fill="#111b24" opacity=".75">OUT OF CONTROL</text>
-      <text x="688" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
-      <text x="934" y="66" text-anchor="middle" fill="#066bb1">IN CONTROL</text>
+      <text x="513" y="100" text-anchor="middle" fill="#111b24" opacity=".75">OUT OF CONTROL</text>
+      <text x="657" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
+      <text x="976" y="66" text-anchor="middle" fill="#066bb1">IN CONTROL</text>
       <text x="365" y="124" text-anchor="end" fill="#111b24" opacity=".7">UCL</text>
       <text x="365" y="151" text-anchor="end" fill="#111b24" opacity=".7">CL</text>
       <text x="365" y="178" text-anchor="end" fill="#111b24" opacity=".7">LCL</text>
-      <text x="1083" y="80" fill="#066bb1">UCL</text>
-      <text x="1083" y="95" fill="#066bb1">CL</text>
-      <text x="1083" y="110" fill="#066bb1">LCL</text>
+      <text x="1081" y="80" fill="#066bb1">UCL</text>
+      <text x="1081" y="95" fill="#066bb1">CL</text>
+      <text x="1081" y="110" fill="#066bb1">LCL</text>
     </g>
   </svg>
 </header>
