@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Lhotse Management Solutions: single-page site, version 17.
+<!-- Lhotse Management Solutions: single-page site, version 18.
      Everything (styles, images, copy) lives in this one file so it can be hosted anywhere as index.html. -->
 <html lang="en">
 <head>
@@ -126,35 +126,42 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
       <a href="#expertise" style="color:var(--deep);text-decoration:none;font-weight:600">See what we do &rarr;</a>
     </div>
   </div>
-  <!-- Background art: the two logo-style peaks, with a before-and-after control chart laid over them -->
-  <svg viewBox="330 0 800 220" role="img" aria-label="Control chart over two mountain peaks: performance is out of control, then a change line where the peaks cross, then performance in control at a higher level within tighter limits" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,800px);height:auto">
+  <!-- Background art: the two logo-style peaks, with a three-step control chart laid over them -->
+  <svg viewBox="330 0 800 220" role="img" aria-label="Control chart over two mountain peaks: out of control, then in control, then a change with a small dip that stays in control, shown beside the deeper out-of-control dip that happens without change management, before performance settles at a higher level within tighter limits" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,800px);height:auto">
     <path d="M330,220 C500,206 580,74 636,44 C652,35 667,40 680,58 C722,116 744,184 810,220 Z" fill="#249cd8" opacity=".22"/>   <!-- blue peak -->
     <path d="M600,220 C690,192 742,42 792,20 C808,13 821,20 834,42 C894,134 990,204 1130,220 Z" fill="#111b24" opacity=".12"/>  <!-- dark peak -->
     <path d="M688,220 C704,182 722,142 738,129 C750,120 761,134 769,151 C781,181 793,206 812,220 Z" fill="#066bb1" opacity=".28"/> <!-- deep blue fold -->
-    <!-- Stage 1: center line and control limits; they stop at the change line -->
-    <path d="M371.5,148H715" stroke="#111b24" stroke-width="1" opacity=".55" fill="none"/>
-    <path d="M371.5,121H715 M371.5,175H715" stroke="#111b24" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6" fill="none"/>
-    <!-- Stage 2: recalculated center line and tighter limits; they start at the change line -->
-    <path d="M715,92H1058.5" stroke="#066bb1" stroke-width="1" fill="none"/>
-    <path d="M715,77H1058.5 M715,107H1058.5" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
-    <!-- The change line, where the two arches cross -->
-    <path d="M715,62V204" stroke="#111b24" stroke-width="1.2" opacity=".6" fill="none"/>
-    <!-- Results: stage 1 in dark, stage 2 in blue; the two lines are not joined across the change -->
-    <polyline points="383.5,142 400.5,152 417.5,114 434.5,139 451.5,159 468.5,151 485.5,134 502.5,143 519.5,164 536.5,140 553.5,154 570.5,181 587.5,157 604.5,136 621.5,145 638.5,161 655.5,132 672.5,141 689.5,153 706.5,138" stroke="#111b24" stroke-width="1.8" stroke-linejoin="round" opacity=".8" fill="none"/>
-    <polyline points="723.5,89 740.5,94 757.5,88 774.5,96 791.5,91 808.5,86 825.5,94 842.5,99 859.5,89 876.5,87 893.5,93 910.5,97 927.5,85 944.5,90 961.5,95 978.5,88 995.5,98 1012.5,91 1029.5,89 1046.5,94" stroke="#066bb1" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
-    <circle cx="383.5" cy="142" r="2.6" fill="#111b24"/><circle cx="400.5" cy="152" r="2.6" fill="#111b24"/><circle cx="417.5" cy="114" r="2.6" fill="#111b24"/><circle cx="434.5" cy="139" r="2.6" fill="#111b24"/><circle cx="451.5" cy="159" r="2.6" fill="#111b24"/><circle cx="468.5" cy="151" r="2.6" fill="#111b24"/><circle cx="485.5" cy="134" r="2.6" fill="#111b24"/><circle cx="502.5" cy="143" r="2.6" fill="#111b24"/><circle cx="519.5" cy="164" r="2.6" fill="#111b24"/><circle cx="536.5" cy="140" r="2.6" fill="#111b24"/><circle cx="553.5" cy="154" r="2.6" fill="#111b24"/><circle cx="570.5" cy="181" r="2.6" fill="#111b24"/><circle cx="587.5" cy="157" r="2.6" fill="#111b24"/><circle cx="604.5" cy="136" r="2.6" fill="#111b24"/><circle cx="621.5" cy="145" r="2.6" fill="#111b24"/><circle cx="638.5" cy="161" r="2.6" fill="#111b24"/><circle cx="655.5" cy="132" r="2.6" fill="#111b24"/><circle cx="672.5" cy="141" r="2.6" fill="#111b24"/><circle cx="689.5" cy="153" r="2.6" fill="#111b24"/><circle cx="706.5" cy="138" r="2.6" fill="#111b24"/>
-    <circle cx="723.5" cy="89" r="2.6" fill="#066bb1"/><circle cx="740.5" cy="94" r="2.6" fill="#066bb1"/><circle cx="757.5" cy="88" r="2.6" fill="#066bb1"/><circle cx="774.5" cy="96" r="2.6" fill="#066bb1"/><circle cx="791.5" cy="91" r="2.6" fill="#066bb1"/><circle cx="808.5" cy="86" r="2.6" fill="#066bb1"/><circle cx="825.5" cy="94" r="2.6" fill="#066bb1"/><circle cx="842.5" cy="99" r="2.6" fill="#066bb1"/><circle cx="859.5" cy="89" r="2.6" fill="#066bb1"/><circle cx="876.5" cy="87" r="2.6" fill="#066bb1"/><circle cx="893.5" cy="93" r="2.6" fill="#066bb1"/><circle cx="910.5" cy="97" r="2.6" fill="#066bb1"/><circle cx="927.5" cy="85" r="2.6" fill="#066bb1"/><circle cx="944.5" cy="90" r="2.6" fill="#066bb1"/><circle cx="961.5" cy="95" r="2.6" fill="#066bb1"/><circle cx="978.5" cy="88" r="2.6" fill="#066bb1"/><circle cx="995.5" cy="98" r="2.6" fill="#066bb1"/><circle cx="1012.5" cy="91" r="2.6" fill="#066bb1"/><circle cx="1029.5" cy="89" r="2.6" fill="#066bb1"/><circle cx="1046.5" cy="94" r="2.6" fill="#066bb1"/>
+    <!-- Steps 1 and 2 share one center line and one pair of control limits -->
+    <path d="M370,148H688" stroke="#111b24" stroke-width="1" opacity=".55" fill="none"/>
+    <path d="M370,121H688 M370,175H688" stroke="#111b24" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6" fill="none"/>
+    <!-- Divider between out of control and in control -->
+    <path d="M514,112V190" stroke="#111b24" stroke-width="1" stroke-dasharray="3 4" opacity=".45" fill="none"/>
+    <!-- Step 3: recalculated center line and tighter limits, starting once the change has settled -->
+    <path d="M790,92H1078" stroke="#066bb1" stroke-width="1" fill="none"/>
+    <path d="M790,77H1078 M790,107H1078" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
+    <!-- The change point -->
+    <path d="M688,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
+    <!-- Results: before the change in dark, from the change onward in blue -->
+    <polyline points="382,143 406,114 430,154 454,144 478,181 502,145 526,141 550,153 574,138 598,156 622,144 646,151 670,142" stroke="#111b24" stroke-width="2" stroke-linejoin="round" opacity=".8" fill="none"/>
+    <polyline points="670,142 706,156 730,167 754,158 778,120 802,89 826,96 850,86 874,94 898,88 922,98 946,87 970,91 994,97 1018,88 1042,95 1066,90" stroke="#066bb1" stroke-width="2" stroke-linejoin="round" fill="none"/>
+    <circle cx="382" cy="143" r="3.2" fill="#111b24"/><circle cx="406" cy="114" r="3.2" fill="#111b24"/><circle cx="430" cy="154" r="3.2" fill="#111b24"/><circle cx="454" cy="144" r="3.2" fill="#111b24"/><circle cx="478" cy="181" r="3.2" fill="#111b24"/><circle cx="502" cy="145" r="3.2" fill="#111b24"/><circle cx="526" cy="141" r="3.2" fill="#111b24"/><circle cx="550" cy="153" r="3.2" fill="#111b24"/><circle cx="574" cy="138" r="3.2" fill="#111b24"/><circle cx="598" cy="156" r="3.2" fill="#111b24"/><circle cx="622" cy="144" r="3.2" fill="#111b24"/><circle cx="646" cy="151" r="3.2" fill="#111b24"/><circle cx="670" cy="142" r="3.2" fill="#111b24"/>
+    <circle cx="706" cy="156" r="3.2" fill="#066bb1"/><circle cx="754" cy="158" r="3.2" fill="#066bb1"/><circle cx="778" cy="120" r="3.2" fill="#066bb1"/><circle cx="802" cy="89" r="3.2" fill="#066bb1"/><circle cx="826" cy="96" r="3.2" fill="#066bb1"/><circle cx="850" cy="86" r="3.2" fill="#066bb1"/><circle cx="874" cy="94" r="3.2" fill="#066bb1"/><circle cx="898" cy="88" r="3.2" fill="#066bb1"/><circle cx="922" cy="98" r="3.2" fill="#066bb1"/><circle cx="946" cy="87" r="3.2" fill="#066bb1"/><circle cx="970" cy="91" r="3.2" fill="#066bb1"/><circle cx="994" cy="97" r="3.2" fill="#066bb1"/><circle cx="1018" cy="88" r="3.2" fill="#066bb1"/><circle cx="1042" cy="95" r="3.2" fill="#066bb1"/><circle cx="1066" cy="90" r="3.2" fill="#066bb1"/>
+    <!-- Without change management: the dip falls out of control (red). With Lhotse: the dip stays in control (black). -->
+    <polyline points="706,156 730,186 754,158" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" stroke-linejoin="round" fill="none"/>
+    <circle cx="730" cy="186" r="3.8" fill="#c0392b"/>
+    <circle cx="730" cy="167" r="3.8" fill="#111b24"/>
     <!-- Small chart labels; hidden on phones, where they would be too small to read -->
     <g class="chartlabel" font-size="9" font-weight="600" letter-spacing=".06em">
-      <text x="543.2" y="100" text-anchor="middle" fill="#111b24" opacity=".75">OUT OF CONTROL</text>
-      <text x="715" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
-      <text x="886.8" y="66" text-anchor="middle" fill="#066bb1">IN CONTROL</text>
-      <text x="366.5" y="124" text-anchor="end" fill="#111b24" opacity=".7">UCL</text>
-      <text x="366.5" y="151" text-anchor="end" fill="#111b24" opacity=".7">CL</text>
-      <text x="366.5" y="178" text-anchor="end" fill="#111b24" opacity=".7">LCL</text>
-      <text x="1063.5" y="80" fill="#066bb1">UCL</text>
-      <text x="1063.5" y="95" fill="#066bb1">CL</text>
-      <text x="1063.5" y="110" fill="#066bb1">LCL</text>
+      <text x="442" y="104" text-anchor="middle" fill="#111b24" opacity=".75">OUT OF CONTROL</text>
+      <text x="601" y="104" text-anchor="middle" fill="#111b24" opacity=".75">IN CONTROL</text>
+      <text x="688" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
+      <text x="934" y="66" text-anchor="middle" fill="#066bb1">IMPROVED</text>
+      <text x="365" y="124" text-anchor="end" fill="#111b24" opacity=".7">UCL</text>
+      <text x="365" y="151" text-anchor="end" fill="#111b24" opacity=".7">CL</text>
+      <text x="365" y="178" text-anchor="end" fill="#111b24" opacity=".7">LCL</text>
+      <text x="1083" y="80" fill="#066bb1">UCL</text>
+      <text x="1083" y="95" fill="#066bb1">CL</text>
+      <text x="1083" y="110" fill="#066bb1">LCL</text>
     </g>
   </svg>
 </header>
