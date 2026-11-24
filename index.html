@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Lhotse Management Solutions: single-page site, version 18.
+<!-- Lhotse Management Solutions: single-page site, version 19.
      Everything (styles, images, copy) lives in this one file so it can be hosted anywhere as index.html. -->
 <html lang="en">
 <head>
@@ -126,42 +126,41 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
       <a href="#expertise" style="color:var(--deep);text-decoration:none;font-weight:600">See what we do &rarr;</a>
     </div>
   </div>
-  <!-- Background art: the two logo-style peaks, with a three-step control chart laid over them -->
-  <svg viewBox="330 0 800 220" role="img" aria-label="Control chart over two mountain peaks: out of control, then in control, then a change with a small dip that stays in control, shown beside the deeper out-of-control dip that happens without change management, before performance settles at a higher level within tighter limits" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,800px);height:auto">
+  <!-- Background art: the two logo-style peaks, with a control chart laid over them -->
+  <svg viewBox="330 0 800 220" role="img" aria-label="Control chart over two mountain peaks: out of control, then in control, then a change with a small dip that stays in control, shown above the deeper out-of-control dip that happens without change management, then performance at a higher level within tighter limits" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,800px);height:auto">
     <path d="M330,220 C500,206 580,74 636,44 C652,35 667,40 680,58 C722,116 744,184 810,220 Z" fill="#249cd8" opacity=".22"/>   <!-- blue peak -->
     <path d="M600,220 C690,192 742,42 792,20 C808,13 821,20 834,42 C894,134 990,204 1130,220 Z" fill="#111b24" opacity=".12"/>  <!-- dark peak -->
     <path d="M688,220 C704,182 722,142 738,129 C750,120 761,134 769,151 C781,181 793,206 812,220 Z" fill="#066bb1" opacity=".28"/> <!-- deep blue fold -->
-    <!-- Steps 1 and 2 share one center line and one pair of control limits -->
-    <path d="M370,148H688" stroke="#111b24" stroke-width="1" opacity=".55" fill="none"/>
-    <path d="M370,121H688 M370,175H688" stroke="#111b24" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6" fill="none"/>
+    <!-- The first two stages share one center line and one pair of control limits -->
+    <path d="M370,148H682" stroke="#111b24" stroke-width="1" opacity=".55" fill="none"/>
+    <path d="M370,121H682 M370,175H682" stroke="#111b24" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6" fill="none"/>
     <!-- Divider between out of control and in control -->
     <path d="M514,112V190" stroke="#111b24" stroke-width="1" stroke-dasharray="3 4" opacity=".45" fill="none"/>
-    <!-- Step 3: recalculated center line and tighter limits, starting once the change has settled -->
-    <path d="M790,92H1078" stroke="#066bb1" stroke-width="1" fill="none"/>
-    <path d="M790,77H1078 M790,107H1078" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
-    <!-- The change point -->
-    <path d="M688,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
+    <!-- Improved stage: recalculated center line and tighter limits -->
+    <path d="M802,92H1090" stroke="#066bb1" stroke-width="1" fill="none"/>
+    <path d="M802,77H1090 M802,107H1090" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
+    <!-- The change line -->
+    <path d="M682,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
+    <!-- Without change management: the same measurement falls out of control (red). One vertical line ties it to the actual point. -->
+    <path d="M718,167V186" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+    <circle cx="718" cy="186" r="3.2" fill="#c0392b"/>
     <!-- Results: before the change in dark, from the change onward in blue -->
     <polyline points="382,143 406,114 430,154 454,144 478,181 502,145 526,141 550,153 574,138 598,156 622,144 646,151 670,142" stroke="#111b24" stroke-width="2" stroke-linejoin="round" opacity=".8" fill="none"/>
-    <polyline points="670,142 706,156 730,167 754,158 778,120 802,89 826,96 850,86 874,94 898,88 922,98 946,87 970,91 994,97 1018,88 1042,95 1066,90" stroke="#066bb1" stroke-width="2" stroke-linejoin="round" fill="none"/>
+    <polyline points="670,142 694,156 718,167 742,157 766,138 790,118 814,97 838,94 862,89 886,87 910,95 934,91 958,86 982,96 1006,90 1030,93 1054,88 1078,95" stroke="#066bb1" stroke-width="2" stroke-linejoin="round" fill="none"/>
     <circle cx="382" cy="143" r="3.2" fill="#111b24"/><circle cx="406" cy="114" r="3.2" fill="#111b24"/><circle cx="430" cy="154" r="3.2" fill="#111b24"/><circle cx="454" cy="144" r="3.2" fill="#111b24"/><circle cx="478" cy="181" r="3.2" fill="#111b24"/><circle cx="502" cy="145" r="3.2" fill="#111b24"/><circle cx="526" cy="141" r="3.2" fill="#111b24"/><circle cx="550" cy="153" r="3.2" fill="#111b24"/><circle cx="574" cy="138" r="3.2" fill="#111b24"/><circle cx="598" cy="156" r="3.2" fill="#111b24"/><circle cx="622" cy="144" r="3.2" fill="#111b24"/><circle cx="646" cy="151" r="3.2" fill="#111b24"/><circle cx="670" cy="142" r="3.2" fill="#111b24"/>
-    <circle cx="706" cy="156" r="3.2" fill="#066bb1"/><circle cx="754" cy="158" r="3.2" fill="#066bb1"/><circle cx="778" cy="120" r="3.2" fill="#066bb1"/><circle cx="802" cy="89" r="3.2" fill="#066bb1"/><circle cx="826" cy="96" r="3.2" fill="#066bb1"/><circle cx="850" cy="86" r="3.2" fill="#066bb1"/><circle cx="874" cy="94" r="3.2" fill="#066bb1"/><circle cx="898" cy="88" r="3.2" fill="#066bb1"/><circle cx="922" cy="98" r="3.2" fill="#066bb1"/><circle cx="946" cy="87" r="3.2" fill="#066bb1"/><circle cx="970" cy="91" r="3.2" fill="#066bb1"/><circle cx="994" cy="97" r="3.2" fill="#066bb1"/><circle cx="1018" cy="88" r="3.2" fill="#066bb1"/><circle cx="1042" cy="95" r="3.2" fill="#066bb1"/><circle cx="1066" cy="90" r="3.2" fill="#066bb1"/>
-    <!-- Without change management: the dip falls out of control (red). With Lhotse: the dip stays in control (black). -->
-    <polyline points="706,156 730,186 754,158" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" stroke-linejoin="round" fill="none"/>
-    <circle cx="730" cy="186" r="3.8" fill="#c0392b"/>
-    <circle cx="730" cy="167" r="3.8" fill="#111b24"/>
+    <circle cx="694" cy="156" r="3.2" fill="#066bb1"/><circle cx="718" cy="167" r="3.2" fill="#066bb1"/><circle cx="742" cy="157" r="3.2" fill="#066bb1"/><circle cx="766" cy="138" r="3.2" fill="#066bb1"/><circle cx="790" cy="118" r="3.2" fill="#066bb1"/><circle cx="814" cy="97" r="3.2" fill="#066bb1"/><circle cx="838" cy="94" r="3.2" fill="#066bb1"/><circle cx="862" cy="89" r="3.2" fill="#066bb1"/><circle cx="886" cy="87" r="3.2" fill="#066bb1"/><circle cx="910" cy="95" r="3.2" fill="#066bb1"/><circle cx="934" cy="91" r="3.2" fill="#066bb1"/><circle cx="958" cy="86" r="3.2" fill="#066bb1"/><circle cx="982" cy="96" r="3.2" fill="#066bb1"/><circle cx="1006" cy="90" r="3.2" fill="#066bb1"/><circle cx="1030" cy="93" r="3.2" fill="#066bb1"/><circle cx="1054" cy="88" r="3.2" fill="#066bb1"/><circle cx="1078" cy="95" r="3.2" fill="#066bb1"/>
     <!-- Small chart labels; hidden on phones, where they would be too small to read -->
     <g class="chartlabel" font-size="9" font-weight="600" letter-spacing=".06em">
       <text x="442" y="104" text-anchor="middle" fill="#111b24" opacity=".75">OUT OF CONTROL</text>
-      <text x="601" y="104" text-anchor="middle" fill="#111b24" opacity=".75">IN CONTROL</text>
-      <text x="688" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
-      <text x="934" y="66" text-anchor="middle" fill="#066bb1">IMPROVED</text>
+      <text x="598" y="104" text-anchor="middle" fill="#111b24" opacity=".75">IN CONTROL</text>
+      <text x="682" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
+      <text x="946" y="66" text-anchor="middle" fill="#066bb1">IMPROVED</text>
       <text x="365" y="124" text-anchor="end" fill="#111b24" opacity=".7">UCL</text>
       <text x="365" y="151" text-anchor="end" fill="#111b24" opacity=".7">CL</text>
       <text x="365" y="178" text-anchor="end" fill="#111b24" opacity=".7">LCL</text>
-      <text x="1083" y="80" fill="#066bb1">UCL</text>
-      <text x="1083" y="95" fill="#066bb1">CL</text>
-      <text x="1083" y="110" fill="#066bb1">LCL</text>
+      <text x="1095" y="80" fill="#066bb1">UCL</text>
+      <text x="1095" y="95" fill="#066bb1">CL</text>
+      <text x="1095" y="110" fill="#066bb1">LCL</text>
     </g>
   </svg>
 </header>
