@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Lhotse Management Solutions: single-page site, version 9.
+<!-- Lhotse Management Solutions: single-page site, version 10.
      Everything (styles, images, copy) lives in this one file so it can be hosted anywhere as index.html. -->
 <html lang="en">
 <head>
@@ -36,18 +36,6 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
 .topbar{position:sticky;top:0;z-index:10;background:#ffffff;border-bottom:1px solid #e6eef5}
 .navlink{color:#3c4b5e;text-decoration:none;padding:8px 14px;border-radius:999px}
 @media (max-width:640px){.navlink{display:none}}       /* on phones, show only the logo and the Contact button */
-/* ---------- Hero control chart ---------- */
-.chart{margin-top:60px}
-.chart svg{display:block;width:100%;height:150px}                                                    /* fixed height; width follows the page */
-.phases{display:grid;grid-template-columns:35fr 24fr 41fr;margin-bottom:8px}                         /* three columns matching the chart's three phases */
-.phases span{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);padding-left:2px}
-.phases span:first-child{color:var(--muted)}                                                         /* the baseline label is quieter than the other two */
-@media (max-width:640px){.phases span{font-size:.58rem;letter-spacing:.03em}}                        /* smaller labels on phones so they fit */
-.chart path,.chart polyline{fill:none;vector-effect:non-scaling-stroke}                              /* line thickness stays constant at any width */
-.chart .limit{stroke-width:1.5;stroke-dasharray:6 5}                                                 /* control limits are dashed */
-.chart .center{stroke-width:1}                                                                       /* averages and dividers are thin solid lines */
-.chart .trace{stroke-width:2.5;stroke-linejoin:round}                                                /* the results line */
-.chart .dot{stroke-width:9;stroke-linecap:round}                                                     /* each result is a round dot */
 /* ---------- Shared section styles ---------- */
 .sec{padding:76px 0}                     /* vertical breathing room for each section */
 .eyebrow{color:var(--deep);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;margin:0 0 12px}
@@ -86,7 +74,7 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
 .portrait{aspect-ratio:1/1;border-radius:50%;overflow:hidden;max-width:150px;background:var(--soft)} /* small, true circle */
 .lead h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.2;margin:0 0 4px}
 /* ---------- Contact band and footer ---------- */
-.cta{background:#111b24;color:#ffffff;position:relative;padding:80px 0 72px;margin-top:20px}
+.cta{background:#111b24;color:#ffffff;position:relative;padding:120px 0 72px;margin-top:20px}
 .cta a{color:#ffffff}
 .cgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
 @media (max-width:780px){.cgrid{grid-template-columns:1fr}}
@@ -124,7 +112,7 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
 
 <!-- ===== HERO: what Lhotse does, in one glance ===== -->
 <header id="top" style="background:linear-gradient(180deg,var(--soft) 0%,var(--bg) 100%);position:relative;overflow:hidden">
-  <div class="wrap" style="padding-top:84px;padding-bottom:64px;position:relative;z-index:1">
+  <div class="wrap" style="padding-top:84px;padding-bottom:230px;position:relative;z-index:1">
     <!-- Tagline -->
     <p style="color:var(--deep);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin:0 0 16px">Redefining the limits</p>
     <!-- Main headline -->
@@ -136,26 +124,14 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
       <a href="#contact" style="background:#066bb1;color:#ffffff;text-decoration:none;padding:14px 28px;border-radius:999px;font-weight:600">Start a conversation</a>
       <a href="#expertise" style="color:var(--deep);text-decoration:none;font-weight:600">See what we do &rarr;</a>
     </div>
-    <!-- Control chart: performance over time. Left: an unstable baseline with wide limits.
-         Middle: the improvement. Right: performance holding inside tighter limits at a better level. -->
-    <div class="chart">
-      <!-- Phase names, sized to sit above the matching part of the chart -->
-      <div class="phases"><span>Baseline</span><span>Improvement</span><span>Sustained</span></div>
-      <svg viewBox="0 0 1000 150" preserveAspectRatio="none" role="img" aria-label="Control chart showing an unstable baseline, an improvement, and performance then sustained within tighter limits at a higher level">
-        <rect x="0" y="72" width="350" height="64" fill="#111b24" opacity=".05"/>                         <!-- baseline zone between its control limits -->
-        <rect x="590" y="30" width="410" height="28" fill="#249cd8" opacity=".16"/>                       <!-- sustained zone between its tighter limits -->
-        <path d="M0,72H350 M0,136H350" class="limit" stroke="#111b24" opacity=".45"/>                     <!-- baseline upper and lower limits -->
-        <path d="M0,104H350" class="center" stroke="#111b24" opacity=".35"/>                              <!-- baseline average -->
-        <path d="M590,30H1000 M590,58H1000" class="limit" stroke="#066bb1"/>                              <!-- sustained upper and lower limits -->
-        <path d="M590,44H1000" class="center" stroke="#066bb1" opacity=".6"/>                             <!-- sustained average -->
-        <path d="M350,8V146 M590,8V146" class="center" stroke="#111b24" opacity=".18"/>                   <!-- dividers between the three phases -->
-        <polyline points="20,110 64,88 108,126 152,97 196,141 240,92 284,118 328,100 374,96" class="trace" stroke="#111b24" opacity=".6"/>          <!-- baseline results -->
-        <polyline points="374,96 422,84 470,70 518,58 566,50 612,47 658,40 704,45 750,38 796,46 842,42 888,48 934,41 980,44" class="trace" stroke="#066bb1"/>                           <!-- improvement and sustained results -->
-        <path d="M20,110h0 M64,88h0 M108,126h0 M152,97h0 M196,141h0 M240,92h0 M284,118h0 M328,100h0" class="dot" stroke="#111b24" opacity=".7"/>                                <!-- baseline points -->
-        <path d="M374,96h0 M422,84h0 M470,70h0 M518,58h0 M566,50h0 M612,47h0 M658,40h0 M704,45h0 M750,38h0 M796,46h0 M842,42h0 M888,48h0 M934,41h0 M980,44h0" class="dot" stroke="#066bb1"/>                                      <!-- improvement and sustained points -->
-      </svg>
-    </div>
   </div>
+  <!-- Background art: two peaks that echo the logo (one blue, one dark, with the deep blue fold between them) -->
+  <svg viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:220px" aria-hidden="true">
+    <path d="M330,220 C500,206 580,74 636,44 C652,35 667,40 680,58 C722,116 744,184 810,220 Z" fill="#249cd8" opacity=".22"/>   <!-- blue peak -->
+    <path d="M600,220 C690,192 742,42 792,20 C808,13 821,20 834,42 C894,134 990,204 1130,220 Z" fill="#111b24" opacity=".12"/>  <!-- dark peak -->
+    <path d="M688,220 C704,182 722,142 738,129 C750,120 761,134 769,151 C781,181 793,206 812,220 Z" fill="#066bb1" opacity=".28"/> <!-- deep blue fold -->
+    <path d="M0,220 C300,216 520,200 720,200 C920,200 1140,214 1440,216 L1440,220 Z" fill="var(--bg)"/>                          <!-- soft white base line -->
+  </svg>
 </header>
 
 <main>
@@ -197,6 +173,8 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
 <section class="sec" id="quantum" style="padding-top:20px">
   <div class="wrap">
     <div class="qpanel">
+      <!-- Faint mountain line in the panel background -->
+      <svg viewBox="0 0 600 300" preserveAspectRatio="none" style="position:absolute;right:-60px;bottom:-40px;width:520px;height:260px;opacity:.10" aria-hidden="true"><path d="M0,300 C120,280 200,60 300,40 C380,24 420,160 470,190 C520,220 560,120 600,100 L600,300 Z" fill="#ffffff"/></svg>
       <!-- Left half: what the model is -->
       <div style="position:relative">
         <p style="letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;font-weight:600;opacity:.85;margin:0 0 12px">Signature framework</p>
@@ -271,6 +249,8 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
 
 <!-- ===== CONTACT: the one next step, plus the footer ===== -->
 <section class="cta" id="contact">
+  <!-- Curved top edge of the dark band -->
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:80px" aria-hidden="true"><path d="M0,0 L1440,0 L1440,30 C1200,90 960,10 720,40 C480,70 240,90 0,40 Z" fill="var(--bg)"/></svg>
   <div class="wrap cgrid">
     <div>
       <p style="text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:600;color:#8fcff0;margin:0 0 12px">Contact</p>
