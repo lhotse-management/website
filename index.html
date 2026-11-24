@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Lhotse Management Solutions: single-page site, version 19.
+<!-- Lhotse Management Solutions: single-page site, version 20.
      Everything (styles, images, copy) lives in this one file so it can be hosted anywhere as index.html. -->
 <html lang="en">
 <head>
@@ -139,10 +139,10 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
     <!-- Improved stage: recalculated center line and tighter limits -->
     <path d="M802,92H1090" stroke="#066bb1" stroke-width="1" fill="none"/>
     <path d="M802,77H1090 M802,107H1090" stroke="#066bb1" stroke-width="1.2" stroke-dasharray="6 5" fill="none"/>
-    <!-- The change line -->
-    <path d="M682,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
-    <!-- Without change management: the same measurement falls out of control (red). One vertical line ties it to the actual point. -->
-    <path d="M718,167V186" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+    <!-- The change window: it starts after the last in control point and ends where the improved limits begin -->
+    <path d="M682,62V198 M802,62V198" stroke="#111b24" stroke-width="1" opacity=".5" fill="none"/>
+    <!-- Without change management: the same measurement falls out of control (red). The dashed path leaves the point before it and rejoins the point after it. -->
+    <polyline points="694,156 718,186 742,157" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" stroke-linejoin="round" fill="none"/>
     <circle cx="718" cy="186" r="3.2" fill="#c0392b"/>
     <!-- Results: before the change in dark, from the change onward in blue -->
     <polyline points="382,143 406,114 430,154 454,144 478,181 502,145 526,141 550,153 574,138 598,156 622,144 646,151 670,142" stroke="#111b24" stroke-width="2" stroke-linejoin="round" opacity=".8" fill="none"/>
@@ -153,7 +153,7 @@ section{scroll-margin-top:84px}          /* stops the sticky menu bar from cover
     <g class="chartlabel" font-size="9" font-weight="600" letter-spacing=".06em">
       <text x="442" y="104" text-anchor="middle" fill="#111b24" opacity=".75">OUT OF CONTROL</text>
       <text x="598" y="104" text-anchor="middle" fill="#111b24" opacity=".75">IN CONTROL</text>
-      <text x="682" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
+      <text x="742" y="54" text-anchor="middle" fill="#111b24">CHANGE</text>
       <text x="946" y="66" text-anchor="middle" fill="#066bb1">IMPROVED</text>
       <text x="365" y="124" text-anchor="end" fill="#111b24" opacity=".7">UCL</text>
       <text x="365" y="151" text-anchor="end" fill="#111b24" opacity=".7">CL</text>
